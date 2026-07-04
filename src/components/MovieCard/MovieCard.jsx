@@ -15,7 +15,7 @@ export default function MovieCard({ movie }) {
             <strong>Description:</strong>
             <p>{movie.abstract}</p>
           </section>
-          <Link to={`/api/v1/mobies/${movie.id}`} className="btn btn-primary">Detail</Link>
+          <Link to={`/movies/${movie.id}`} className="btn btn-primary">Detail</Link>
         </div>
       </div >
     </>
