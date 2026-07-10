@@ -25,7 +25,7 @@ export default function TableMovie() {
 
           <div className="table-responsive">
             <table className="table table-striped">
-              <thead>
+              <thead className="text-center">
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Title</th>
