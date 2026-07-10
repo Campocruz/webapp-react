@@ -14,7 +14,7 @@ export default function AdminLayout() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/admin/create_book" end className={({ isActive }) => `nav-link ${isActive ? "active" : "text-white"}`}>
+              <NavLink to="/admin/books/create" end className={({ isActive }) => `nav-link ${isActive ? "active" : "text-white"}`}>
                 Add New Book
               </NavLink>
             </li>

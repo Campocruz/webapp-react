@@ -37,7 +37,7 @@ export default function TableMovie() {
               <tbody>
 
 
-                {movies.map((movie, index) => (
+                {movies?.map((movie, index) => (
                   <tr key={movie.id}>
                     <th scope="row">{index + 1}</th>
                     <td>{movie.title}</td>

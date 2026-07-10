@@ -12,10 +12,11 @@ import DefaultLayout from '../../layouts/DefaultLayout'
 import AdminLayout from '../../layouts/AdminLayout'
 
 // Import web page
-import HomePage from '../../pages/web/HomePage'
-import MovieDetail from '../../pages/web/MovieDetail'
-import About from '../../pages/web/About'
-import Contact from '../../pages/web/Contact'
+import HomePage from '../../pages/guest/HomePage'
+import MovieDetail from '../../pages/guest/MovieDetail'
+import About from '../../pages/guest/About'
+import Contact from '../../pages/guest/Contact'
+import NotFound from '../../pages/guest/NotFound'
 
 // Import admin page
 import AdminHomePage from '../../pages/admin/AdminHomePage'
@@ -28,17 +29,21 @@ export default function App() {
       <BrowserRouter>
         <MoviesProvider>
           <Routes>
+            {/* Admin Route */}
+            <Route element={<AdminLayout />}>
+              <Route path='/admin' element={<AdminHomePage />} />
+              <Route path='/admin/books/create' element={<CreateBookPage />} />
+            </Route>
+
+            {/* Guest Route */}
             <Route element={<DefaultLayout />}>
               <Route path='/' element={<HomePage />} />
               <Route path='/movies/:id' element={<MovieDetail />} />
               <Route path='/about' element={<About />} />
               <Route path='/contact' element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
             </Route>
 
-            <Route element={<AdminLayout />}>
-              <Route path='/admin' element={<AdminHomePage />} />
-              <Route path='/admin/create_book' element={<CreateBookPage />} />
-            </Route>
           </Routes>
         </MoviesProvider>
       </BrowserRouter >

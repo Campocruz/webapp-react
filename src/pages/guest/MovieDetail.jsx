@@ -1,6 +1,12 @@
+// Import from react
 import { useEffect, useState } from "react";
+
+// Import from router
 import { useParams } from "react-router"
+
+// Import compnents
 import ReviewCard from "../../components/web/ReviewCard/ReviewCard";
+import LoadingPage from '../../components/global/LoadingPage/LoadingPage'
 
 export default function MovieDetail() {
 
@@ -14,11 +20,15 @@ export default function MovieDetail() {
   const url = `http://127.0.0.1:3000/api/v1/mobies/${id}`;
   const [movie, setMovie] = useState({});
   const [inputForm, setInputForm] = useState(initialObj)
+  const [load, setLoad] = useState(true)
 
   function fetchData(url) {
     fetch(url)
       .then(response => response.json())
-      .then(data => setMovie(data))
+      .then(data => {
+        setMovie(data)
+        setLoad(false)
+      })
       .catch(err => console.log(err))
   }
 
@@ -38,6 +48,8 @@ export default function MovieDetail() {
   useEffect(() => {
     fetchData(url);
   }, [])
+
+  if (load) { return <LoadingPage /> }
 
   return (
     <>
