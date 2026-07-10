@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import MovieCard from "../components/MovieCard/MovieCard";
+import MovieCard from "../../components/web/MovieCard/MovieCard";
 
 export default function HomePage() {
 
@@ -33,7 +33,7 @@ export default function HomePage() {
 
         <section>
           <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2">
-            {movies?.map(movie => 
+            {movies?.map(movie =>
               <div className="col" key={movie?.id}>
                 <MovieCard movie={movie} />
               </div>

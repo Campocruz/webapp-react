@@ -22,6 +22,7 @@ export default function Header() {
                 <NavLink className="nav-link" to="/contact">Contact</NavLink>
               </li>
             </ul>
+            <NavLink className="nav-link" to="/admin">Admin</NavLink>
           </div>
         </div>
       </nav>

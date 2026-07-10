@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router"
-import ReviewCard from "../components/ReviewCard/ReviewCard";
+import ReviewCard from "../../components/web/ReviewCard/ReviewCard";
 
 export default function MovieDetail() {
 
@@ -66,11 +66,11 @@ export default function MovieDetail() {
           <div className="accordion" id="accordion">
             <div className="accordion-item">
               <h2 className="accordion-header">
-                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                   Add Your Comment
                 </button>
               </h2>
-              <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordion">
+              <div id="collapseOne" className="accordion-collapse collapse " data-bs-parent="#accordion">
                 <div className="accordion-body">
                   <form className="row g-3" onSubmit={handleSubmit}>
                     <div className="col-md-6">
