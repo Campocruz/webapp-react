@@ -23,7 +23,6 @@ export default function MovieDetail() {
   const [load, setLoad] = useState(true)
 
   function fetchData(url) {
-    setLoad(true);
     fetch(url)
       .then(response => response.json())
       .then(data => {
@@ -34,7 +33,8 @@ export default function MovieDetail() {
   }
 
   function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
+    console.log(inputForm);
     fetch(url + '/reviews', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -43,7 +43,6 @@ export default function MovieDetail() {
       .then(response => response.json())
       .then(data => setInputForm(initialObj))
       .catch(err => console.log(err))
-    fetchData(url);
   }
 
   useEffect(() => {

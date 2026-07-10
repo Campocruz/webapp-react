@@ -1,3 +1,5 @@
+import SimpleBarChart from "../../components/global/SimpleBarChar/SimpleBarChart";
+
 export default function Dashboard() {
 
   return (
@@ -6,9 +8,8 @@ export default function Dashboard() {
         <div className="col">
           <div className="card border-light mb-3">
             <div className="card-header">Header</div>
-            <div className="card-body">
-              <h5 className="card-title">Light card title</h5>
-              <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ipsum!</p>
+            <div className="card-body m-0">
+              <SimpleBarChart />
             </div>
           </div>
         </div>
@@ -26,9 +27,8 @@ export default function Dashboard() {
         <div className="col">
           <div className="card border-light mb-3">
             <div className="card-header">Header</div>
-            <div className="card-body">
-              <h5 className="card-title">Light card title</h5>
-              <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ipsum!</p>
+            <div className="card-body m-0">
+              <SimpleBarChart />
             </div>
           </div>
         </div>

@@ -6,13 +6,10 @@ import { MoviesProvider, useMovies } from "../../contexts/MovieContext";
 
 // Import components
 import MovieCard from "../../components/guest/MovieCard/MovieCard";
-import LoadingPage from "../../components/global/LoadingPage/LoadingPage";
 
 export default function HomePage() {
 
-  const { movies, load } = useMovies();
-
-  if (load) { return <LoadingPage /> }
+  const { movies } = useMovies();
 
   return (
     <>

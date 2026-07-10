@@ -8,7 +8,7 @@ import { useParams } from "react-router"
 import ReviewCard from "../../components/guest/ReviewCard/ReviewCard";
 import LoadingPage from '../../components/global/LoadingPage/LoadingPage'
 
-export default function MovieDetail() {
+export default function AdminMovieDetail() {
 
   const initialObj = {
     name: '',

@@ -9,7 +9,7 @@ export default function NotFound() {
         <section className="text-center vh-100">
           <h1><strong>404</strong></h1>
           <p>Page not Foound</p>
-          <button className="btn btn-secondary" onClick={() => navigate("/")}>Home Page</button>
+          <button className="btn btn-secondary" onClick={() => navigate(-1)}>Go Back</button>
         </section>
       </div>
     </>

@@ -20,7 +20,7 @@ import NotFound from '../../pages/guest/NotFound'
 
 // Import admin page
 import AdminHomePage from '../../pages/admin/AdminHomePage'
-import CreateBookPage from '../../pages/admin/CreateBookPage'
+import CreateMoviePage from '../../pages/admin/CreateMoviePage'
 
 export default function App() {
 
@@ -32,7 +32,8 @@ export default function App() {
             {/* Admin Route */}
             <Route element={<AdminLayout />}>
               <Route path='/admin' element={<AdminHomePage />} />
-              <Route path='/admin/books/create' element={<CreateBookPage />} />
+              <Route path='/admin/movies/:id' element={<MovieDetail />} />
+              <Route path='/admin/movies/create' element={<CreateMoviePage />} />
             </Route>
 
             {/* Guest Route */}
